@@ -8,30 +8,37 @@
 
 <body>
   <header>
-    <h1>What's for Dinner?</h1>
-    <button class="add-recipe">ADD A RECIPE</button>
-  </header>
-  <section class="left-box">
-    <h2>What are you looking for?</h2>
-    <div id="choose-course">
-      <input type="radio" name="one" id="side-button">
-      <label for="side">Side</label><br>
-      <input type="radio" name="one" id="entree-button">
-      <label for="entree">Entree</label><br>
-      <input type="radio" name="one" id="dessert-button">
-      <label for="dessert">Dessert</label><br>
-      <input type="radio" name="one" id="entire-meal-button">
-      <label for="entire-meal">Entire Meal</label><br>
+    <div class="header-bar">
+      <h1>What's for Dinner?</h1>
+      <button class="add-recipe">ADD A RECIPE</button>
     </div>
-    <button type="submit" class="cook-button">LET'S COOK</button>
-  </section>
-  <section class="right-box">
-    <h2>you should make:</h2>
-    <br>
-    <h3>Food!
-    </h3>
-    <button class="clear">CLEAR</button>
-  </section>
+  </header>
+  <div class="center-content">
+    <section class="left-box">
+      <h2 class="left-header">What are you looking for?</h2>
+      <div id="choose-course">
+        <input type="radio" name="one" id="side-button">
+        <label for="side">Side</label>
+        <br>
+        <input type="radio" name="one" id="entree-button">
+        <label for="entree">Entree</label>
+        <br>
+        <input type="radio" name="one" id="dessert-button">
+        <label for="dessert">Dessert</label><br>
+      </div>
+      <button type="submit" class="cook-button">LET'S COOK!</button>
+    </section>
+    <section class="right-box">
+      <div class="text-overlay hidden"> 
+        <h2>you should make:</h2>
+      <br>
+      <h3>Food!
+      </h3>
+    </div>
+      <div class="image">
+       <img src="cookpot.svg" alt="cooking pot"/>
+      </div>
+    </section>
 </body>
 <script type="text/javascript" src="main.js"></script>
 </html>
