@@ -3,7 +3,9 @@ var addRecipeButton = document.querySelector('.add-recipe');
 var letsCookButton = document.querySelector('.cook-button');
 var potImage = document.querySelector('.cookpot')
 var mealDisplay = document.querySelector('.meal-display')
-
+var userRecipePage = document.querySelector('.recipe-page')
+var mainPage = document.querySelector('.main-page')
+var submitRecipeButton = document.querySelector('.submit-recipe-button')
 
 
 
@@ -62,7 +64,8 @@ var dessert = [
 
 // Event listeners
 letsCookButton.addEventListener('click', chooseMealRandom);
-
+addRecipeButton.addEventListener('click',userAddRecipe)
+submitRecipeButton.addEventListener('click',submitUserRecipe)
 
 // Function declarations
 function getRandomIndex(array) {
@@ -90,3 +93,14 @@ function chooseMealRandom() {
   }
 }
 
+function userAddRecipe() {
+  userRecipePage.classList.remove("hidden")
+  window.scrollBy(0, 300);
+}
+
+
+function submitUserRecipe(){
+window.scrollBy(0, -300);
+userRecipePage.classList.add("hidden")
+potImage.classList.add("hidden")
+}
