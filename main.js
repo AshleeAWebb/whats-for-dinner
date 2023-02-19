@@ -103,16 +103,17 @@ function userAddRecipe() {
 
 function submitUserRecipe(){
   var userType = document.getElementById("recipe-input-type").value;
-  var recipeSubmitted = document.getElementById("recipe-input").value; // Define recipeSubmitted here
-  if (userType === "side" || "Side"){
-    side.push(recipeSubmitted);
-  } else if (userType === "entree" || "Entree"){
-    entree.push(recipeSubmitted);
-  } else if (userType === "dessert"|| "Dessert"){
-    dessert.push(recipeSubmitted);
+  var recipeSubmitted = document.getElementById("recipe-input").value; 
+  var capitalizedRecipe = recipeSubmitted.charAt(0).toUpperCase() + recipeSubmitted.slice(1);
+  if (userType === "side" || userType === "Side"){
+    side.push(capitalizedRecipe);
+  } else if (userType === "entree" || userType === "Entree"){
+    entree.push(capitalizedRecipe);
+  } else if (userType === "dessert" || userType === "Dessert"){
+    dessert.push(capitalizedRecipe);
   } else {
     var errorMessage = document.getElementById("error-message");
-    errorMessage.textContent = "This type of recipe does not exist";
+    errorMessage.textContent = "This type of recipe does not exist! Please input a side, entree, or dessert";
     return;
   }
   window.scrollBy(0, -300);
@@ -121,5 +122,5 @@ function submitUserRecipe(){
   mealDisplay.classList.remove("hidden");
   mealDisplay.innerHTML='';
   mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
-    <h3>${recipeSubmitted}!</h3>`;
+    <h3>${capitalizedRecipe}!</h3>`;
 }
