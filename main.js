@@ -11,7 +11,7 @@ var submitRecipeButton = document.querySelector('.submit-recipe-button')
 
 
 // Global variables
-var sides = [
+var side = [
   "Miso Glazed Carrots",
   "Coleslaw",
   "Garden Salad",
@@ -83,7 +83,7 @@ function chooseMealRandom() {
   var mealSelected = document.querySelectorAll("input[name='meal-type']");
   if (mealSelected[0].checked){
     mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
-    <h3>${randomMeal(sides)}!</h3>`
+    <h3>${randomMeal(side)}!</h3>`
   }else if (mealSelected[1].checked){
     mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
     <h3>${randomMeal(entree)}!</h3>` 
@@ -95,12 +95,31 @@ function chooseMealRandom() {
 
 function userAddRecipe() {
   userRecipePage.classList.remove("hidden")
+  potImage.classList.remove("hidden")
+  mealDisplay.classList.add("hidden")
   window.scrollBy(0, 300);
 }
 
 
 function submitUserRecipe(){
-window.scrollBy(0, -300);
-userRecipePage.classList.add("hidden")
-potImage.classList.add("hidden")
+  var userType = document.getElementById("recipe-input-type").value;
+  var recipeSubmitted = document.getElementById("recipe-input").value; // Define recipeSubmitted here
+  if (userType === "side" || "Side"){
+    side.push(recipeSubmitted);
+  } else if (userType === "entree" || "Entree"){
+    entree.push(recipeSubmitted);
+  } else if (userType === "dessert"|| "Dessert"){
+    dessert.push(recipeSubmitted);
+  } else {
+    var errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = "This type of recipe does not exist";
+    return;
+  }
+  window.scrollBy(0, -300);
+  userRecipePage.classList.add("hidden");
+  potImage.classList.add("hidden");
+  mealDisplay.classList.remove("hidden");
+  mealDisplay.innerHTML='';
+  mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
+    <h3>${recipeSubmitted}!</h3>`;
 }

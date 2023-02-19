@@ -138,11 +138,12 @@ h3{
     accent-color: blue;
     text-align: center;
 }
-#recipe-input{
-    text-align: center;
+#recipe-input,#recipe-input-type{
+   text-align: center;
    padding: 10px;
    height: auto;
    width: 200px;
+   font-size: 20px;
 }
 
 .submit-recipe-button{
@@ -163,9 +164,15 @@ h3{
     font-size: 35px;
 
 }
+#error-message{
+    font-size: larger;
+    color: #ee5253;
 
+
+}
 .hidden{
     display: none;
+   
 }
 
 /* font-family: 'Roboto', sans-serif;
