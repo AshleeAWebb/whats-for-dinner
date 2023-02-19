@@ -1,51 +1,25 @@
-# What's for Dinner?
-
-## Overview
-
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
 # What's for Dinner? 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+>This application stores meal options and produces a random selection of either side, entree, or dessert, solving the problem of what's for dinner. The application randomly selects pre-generated and user-input meals and generates the response on the adjacent screen. All user-provided meals are stored in a specific array so that it to can be generated later. 
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+> The steps a person would take to clone down and run the app would be as follows:
+> 1. Fork the GitHub repository file
+> 2. Using the git clone command on their terminal, they could initiate a copy of the required files.
+> 3. Once they have cloned the application, they would be able to cd into the directory, and using the open index.HTML string of text it would open the application in their own web browsers so they could enjoy the functionality of the application.
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+>![Gify What's For Dinner?](https://media4.giphy.com/media/ofpd1T3V3078nnMSYD/giphy.gif)
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+>The project took around 20 hours spending around 4-5 hours a day working on the different files. I am in week 3 of module one. 
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+>Ashlee Webb - https://github.com/AshleeAWebb
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+> The learning goal was to experience building an application using HTML, CSS, and JavaScript. This application allowed for the individual challenge of problem-solving and testing the knowledge gained over the last few weeks. It displayed how the different files interact with one another to create a functioning and aesthetically pleasing application. 
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+>Wins for this project understanding how the different files are connected and work together, creating code for the add recipe function without having to google anything, and productively struggling through the radio buttons! The biggest challenge I faced was originally trying to do a for loop to run through the different meal arrays but I could not get it to function. After several attempts to correct but, I was able to step away and think of a workaround that allowed the code to function another challenge was a simple overlook of forgetting to add the hidden feature to the CSS which I did reach out to the cohort for help on. 
