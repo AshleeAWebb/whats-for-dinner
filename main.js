@@ -7,9 +7,6 @@ var userRecipePage = document.querySelector('.recipe-page')
 var mainPage = document.querySelector('.main-page')
 var submitRecipeButton = document.querySelector('.submit-recipe-button')
 
-
-
-
 // Global variables
 var side = [
   "Miso Glazed Carrots",
@@ -61,13 +58,18 @@ var dessert = [
   "Eclairs"
 ];
 
-
 // Event listeners
 letsCookButton.addEventListener('click', chooseMealRandom);
-addRecipeButton.addEventListener('click',userAddRecipe)
-submitRecipeButton.addEventListener('click',submitUserRecipe)
+addRecipeButton.addEventListener('click', userAddRecipe)
+submitRecipeButton.addEventListener('click', submitUserRecipe)
 
 // Function declarations
+function userAddRecipe() {
+  userRecipePage.classList.remove("hidden")
+  potImage.classList.remove("hidden")
+  mealDisplay.classList.add("hidden")
+  window.scrollBy(0, 350);
+}
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
@@ -79,48 +81,40 @@ function randomMeal(meals) {
 
 function chooseMealRandom() {
   potImage.classList.add("hidden")
-  mealDisplay.innerHTML=''
+  mealDisplay.innerHTML = ''
   var mealSelected = document.querySelectorAll("input[name='meal-type']");
-  if (mealSelected[0].checked){
+  if (mealSelected[0].checked) {
     mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
     <h3>${randomMeal(side)}!</h3>`
-  }else if (mealSelected[1].checked){
+  } else if (mealSelected[1].checked) {
     mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
-    <h3>${randomMeal(entree)}!</h3>` 
-  }else if (mealSelected[2].checked){
+    <h3>${randomMeal(entree)}!</h3>`
+  } else if (mealSelected[2].checked) {
     mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
     <h3>${randomMeal(dessert)}!</h3>`
   }
 }
 
-function userAddRecipe() {
-  userRecipePage.classList.remove("hidden")
-  potImage.classList.remove("hidden")
-  mealDisplay.classList.add("hidden")
-  window.scrollBy(0, 300);
-}
-
-
-function submitUserRecipe(){
+function submitUserRecipe() {
   var userType = document.getElementById("recipe-input-type").value;
-  var recipeSubmitted = document.getElementById("recipe-input").value; 
+  var recipeSubmitted = document.getElementById("recipe-input").value;
   var capitalizedRecipe = recipeSubmitted.charAt(0).toUpperCase() + recipeSubmitted.slice(1);
-  if (userType === "side" || userType === "Side"){
+  if (userType === "side" || userType === "Side") {
     side.push(capitalizedRecipe);
-  } else if (userType === "entree" || userType === "Entree"){
+  } else if (userType === "entree" || userType === "Entree") {
     entree.push(capitalizedRecipe);
-  } else if (userType === "dessert" || userType === "Dessert"){
+  } else if (userType === "dessert" || userType === "Dessert") {
     dessert.push(capitalizedRecipe);
   } else {
     var errorMessage = document.getElementById("error-message");
     errorMessage.textContent = "This type of recipe does not exist! Please input a side, entree, or dessert";
     return;
   }
-  window.scrollBy(0, -300);
+  window.scrollBy(0, -350);
   userRecipePage.classList.add("hidden");
   potImage.classList.add("hidden");
   mealDisplay.classList.remove("hidden");
-  mealDisplay.innerHTML='';
+  mealDisplay.innerHTML = '';
   mealDisplay.innerHTML += `<h2 class="should-make">You should make:</h2>
     <h3>${capitalizedRecipe}!</h3>`;
 }
