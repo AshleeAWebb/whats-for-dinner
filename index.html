@@ -15,7 +15,7 @@
       <button class="add-recipe">ADD A RECIPE</button>
     </div>
   </header>
-  <div class="center-content">
+  <div class="main-page">
     <section class="left-box">
       <h2 class="left-header">What are you looking for?</h2>
       <div id="choose-course">
@@ -34,13 +34,25 @@
     <div class="right-box">
       <div class="image">
         <img class="cookpot" src="/Users/ashleeaubree/turing_work/1mod/whats-for-dinner/assets/cookpot.svg"
-          alt="cooking pot" />
+          alt="cooking pot" width="200" height="200"/>
       </div>
       <div class="meal-display">
         <h2 class="should-make"></h2>
         <h3></h3>
       </div>
     </div>
+  </div>
+  <div class="recipe-page hidden">
+    <h2 class="recipe-header">Submit Your Own Recipe</h2>
+    <br>
+    <p>What is the title of your recipe?</p>
+    <input type="text" name="recipe-title" id="recipe-input" placeholder="recipe title here">
+    <p>What type of recipe is it? </p>
+    <input type="text" name="recipe-type" id="recipe-input-type" placeholder="side, entree, or dessert">
+    <br>
+    <p id="error-message"></p>
+    <button type="submit" class="submit-recipe-button">Add New</button>
+  </div>
   </div>
   <script type="text/javascript" src="main.js"></script>
 </body>
