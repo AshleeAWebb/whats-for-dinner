@@ -16,7 +16,10 @@
 >The project took around 20 hours spending around 4-5 hours a day working on the different files. I am in week 3 of module one. 
 
 ### Contributors:
->Ashlee Webb - https://github.com/AshleeAWebb
+[Ashlee Webb](https://github.com/AshleeAWebb)
+
+### Link:
+[What's For Dinner](https://ashleeawebb.github.io/whats-for-dinner/)
 
 ### Learning Goals:
 > The learning goal was to experience building an application using HTML, CSS, and JavaScript. This application allowed for the individual challenge of problem-solving and testing the knowledge gained over the last few weeks. It displayed how the different files interact with one another to create a functioning and aesthetically pleasing application. 
